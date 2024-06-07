@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "9bbc4c81-acfd-405a-9ae6-ee9a2c76a780",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "16909489",
+		"_collection_link": "https://planetary-spaceship-308042.postman.co/workspace/New-Team-Workspace~eb513957-3e2d-40cf-90d3-1742740df064/collection/16909489-9bbc4c81-acfd-405a-9ae6-ee9a2c76a780?action=share&source=collection_link&creator=16909489"
+	},
+	"item": [
+		{
+			"name": "Sociai_App",
+			"item": [
+				{
+					"name": "http://127.0.0.1:8000/users/postsignup/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token ba5506c5a2c45544404cd786c56dd4e75be6b344"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\": \"rani\",\r\n        \"email\": \"rani@gmail.com\",\r\n        \"password\": \"rani@123\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/users/postsignup/"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/users/postSignIn/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"reema@gmail.com\",\r\n    \"password\":\"reema@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/users/postSignIn/"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/users/search/?search=ee",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token ba5506c5a2c45544404cd786c56dd4e75be6b344"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/search/?search=ee",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"search",
+								""
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "ee"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/users/send_friend_request/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token ba5506c5a2c45544404cd786c56dd4e75be6b344"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"receiver\":\"geeta@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/users/send_friend_request/"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/users/pending_friend_requests/",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 193940199fd8007497b016f5914291803fa67be4"
+							}
+						],
+						"url": "http://127.0.0.1:8000/users/pending_friend_requests/"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/users/reject_friend_request/1/",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 193940199fd8007497b016f5914291803fa67be4"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"receiver\":\"geeta@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/users/reject_friend_request/1/"
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/users/friends/",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token ba5506c5a2c45544404cd786c56dd4e75be6b344"
+							}
+						],
+						"url": "http://127.0.0.1:8000/users/friends/"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
